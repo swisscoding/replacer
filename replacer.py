@@ -1,11 +1,19 @@
 #!/usr/local/bin/python3
+# Made by @swisscoding on Instagram
 
+from colored import stylize, fg
+
+# decoration
+print(stylize("\n---- | Replacer using Python3 | ----\n", fg("red")))
+
+# user interaction
 text = input("Import text: ").lower()
-print()
-wordToReplace = input("Which word do you want to replace?\n").lower()
-wordToReplaceWith = input("With which word do you want to replace it?\n").lower()
+wordToReplace = input("\nWord to replace: ").lower()
+wordToReplaceWith = input("Word to replace with: ").lower()
 
-def replace(text, wTR, wTRW):
+# function
+def do_replace(text, wTR, wTRW):
     return f"\nModified text: {text.replace(wTR, wTRW)}\n"
 
-print(replace(text, wordToReplace, wordToReplaceWith))
+# output
+print(do_replace(text, wordToReplace, wordToReplaceWith))
